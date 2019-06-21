@@ -16,7 +16,9 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <!-- 3.1.1的版本存在无法将date类型转换为LocalDate类型的问题，替换方案为使用3.0.7版本 -->
         <mybatis-plus-boot-starter.version>3.1.1</mybatis-plus-boot-starter.version>
+        <druid.version>1.1.17</druid.version>
         <mysql-connector-java.version>8.0.16</mysql-connector-java.version>
         <mybatis-plus-generator.version>3.1.1</mybatis-plus-generator.version>
         <velocity-engine-core.version>2.1</velocity-engine-core.version>
@@ -32,6 +34,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
         <!-- 数据访问 -->
@@ -50,6 +57,18 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${mybatis-plus-boot-starter.version}</version>
+        </dependency>
+        <!-- 解决将date类型转换为LocalDate类型的问题 -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-typehandlers-jsr310</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <!-- druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
         </dependency>
         <!-- 代码生成器 -->
         <dependency>
