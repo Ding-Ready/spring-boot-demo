@@ -88,7 +88,7 @@ public class MybatisPlusConfig {
             logger.info("数据库一初始化完成！");
             DruidDataSource db2DataSource = db2DataSource();
             db2DataSource.init();
-            logger.info("系统管理中心数据库初始化完成！");
+            logger.info("数据库二初始化完成！");
             hashMap.put(DataSourceEnum.DB1.id(), db1DataSource);
             hashMap.put(DataSourceEnum.DB2.id(), db2DataSource);
             multipleDataSource.setTargetDataSources(hashMap);
