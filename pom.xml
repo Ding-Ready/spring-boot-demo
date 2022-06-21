@@ -19,7 +19,7 @@
         <!-- 3.1.1的版本存在无法将date类型转换为LocalDate类型的问题，替换方案为使用3.0.7版本 -->
         <mybatis-plus-boot-starter.version>3.1.1</mybatis-plus-boot-starter.version>
         <druid.version>1.1.17</druid.version>
-        <mysql-connector-java.version>8.0.16</mysql-connector-java.version>
+        <mysql-connector-java.version>8.0.28</mysql-connector-java.version>
         <mybatis-plus-generator.version>3.1.1</mybatis-plus-generator.version>
         <velocity-engine-core.version>2.1</velocity-engine-core.version>
     </properties>
